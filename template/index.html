@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -57,18 +63,24 @@
             <form action="#" class="login-form text-left">
               <div class="form-group mb-4">
                 <label>Company Email</label>
-                <input type="email" name="email" placeholder="Email" class="form-control">
+                <input id="Temail" type="email" name="email" placeholder="Email" class="form-control">
               </div>
               <div class="form-group mb-4">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Password" class="form-control">
+                <input id="Tpassword" type="password" name="password" placeholder="Password" class="form-control">
               </div>
               <div class="form-group mb-4">
                 <label>Carbon Credit Permit</label>
                 <input type="file" name="ccpermit" placeholder="" class="form-control">
               </div>
               <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary">
+                <input id="Tlogin" type="submit" value="Login" class="btn btn-primary">
+              </div>
+              <div class="form-group">
+                <input id="Tsignup" type="submit" value="Signup" class="btn btn-primary">
+              </div>
+              <div class="form-group">
+                <input id="Tlogout" type="submit" value="Logout" class="btn btn-primary">
               </div>
             </form>
           </div>
@@ -126,32 +138,12 @@
       </div>
     </footer>
     <!-- JavaScript files-->
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDXgfRahUI_SgoXrLQxyi0XiO1QWv-8da0",
-        authDomain: "artis-389c6.firebaseapp.com",
-        databaseURL: "https://artis-389c6.firebaseio.com",
-        projectId: "artis-389c6",
-        storageBucket: "artis-389c6.appspot.com",
-        messagingSenderId: "120329458512",
-        appId: "1:120329458512:web:9cea221335ccbe4f7dd255",
-        measurementId: "G-VQW32YG1TD"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-    </script>
-
+    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.js"></script>
     <script src="js/front.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-    https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
