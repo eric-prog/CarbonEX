@@ -126,10 +126,32 @@
       </div>
     </footer>
     <!-- JavaScript files-->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDXgfRahUI_SgoXrLQxyi0XiO1QWv-8da0",
+        authDomain: "artis-389c6.firebaseapp.com",
+        databaseURL: "https://artis-389c6.firebaseio.com",
+        projectId: "artis-389c6",
+        storageBucket: "artis-389c6.appspot.com",
+        messagingSenderId: "120329458512",
+        appId: "1:120329458512:web:9cea221335ccbe4f7dd255",
+        measurementId: "G-VQW32YG1TD"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.js"></script>
     <script src="js/front.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
   </body>
 </html>
