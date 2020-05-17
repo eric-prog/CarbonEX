@@ -26,8 +26,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/CarbonEXFavicon.png">
@@ -71,10 +69,10 @@
                 <a class="btn btn-primary" href="localhost:5000" onclick="window.open('localhost:5000')" role="button">Please Input Carbon Credits Here</a>
               </div>
               <div class="form-group">
-                <a class="btn btn-primary" href="trade.html" role="button">Login</a>
+                <a id="Tlogin" class="btn btn-primary" href="trade.html" role="button">Login</a>
               </div>
               <div class="form-group">
-                <a class="btn btn-primary" href="trade.html" role="button">Signup</a>
+                <a id="Tsignup" class="btn btn-primary" href="trade.html" role="button">Signup</a>
               </div>
               <div class="form-group">
                 <a id="Tlogout" class="btn btn-primary" href="index.html" role="button">Logout</a>
@@ -137,6 +135,6 @@
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.js"></script>
     <script src="js/front.js"></script>
-    <script src="js/auth.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
