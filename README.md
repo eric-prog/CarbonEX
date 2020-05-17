@@ -15,5 +15,8 @@ To run this project, install the following files:
 
 ##Features
 
+##Acknowledgement
+Thank you to https://bootstrapious.com/p/big-bootstrap-tutorial for the great tutorials on Bootstrap
+
 ###License
 This project is licensed under MIT
