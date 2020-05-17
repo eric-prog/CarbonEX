@@ -1,5 +1,5 @@
-# Artis
-A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies and incentivizing the contributions of consumers towards donating to global environmental charities.
+# CarbonEX
+A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies and incentivizing the contributions of consumers towards donating to global environmental charities. Artis creates a way to be economically profitable and reduce harm to the environment.
 
 ## Technologies
 Project is created with:
@@ -16,7 +16,7 @@ To run this project, install the following files:
 ##Features
 
 ##Acknowledgement
-Thank you to https://bootstrapious.com/p/big-bootstrap-tutorial for the great tutorials on Bootstrap
+Thank you to https://bootstrapious.com/p/big-bootstrap-tutorial for the great tutorials on Bootstrap.
 
 ###License
 This project is licensed under MIT
