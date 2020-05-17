@@ -12,40 +12,54 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+    var cname = document.getElementById("name");
+    var cemail = document.getElementById("email");
+    var ccredits = document.getElementById("credits");
+    var cprice = document.getElementById("price");
+    var sButton = document.getElementById("sButton");
+
+    function saveData(){
+        let acname = cname.value;
+        let bcemail = cemail.value;
+        let ecredits = ccredits.value;
+        let dcprice = cprice.value;
+        db.collection("Companies").doc(acname.value).set({
+            Email: bcemail,
+            Credits: ecredits,
+            Price: dcprice
+        })
+    }
 
     const txtEmail = document.getElementById('Temail')
     const txtPassword = document.getElementById('Tpassword')
-    const btnLogin = document.getElementById('Tlogin')
-    const btnSignup = document.getElementById('Tsignup')
-    const btnLogout = document.getElementById('Tlogout')
 
-    btnLogin.addEventListener('click', e => {
+    function login(){
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message))
-    })
+    }
 
-    btnSignup.addEventListener('click', e => {
+    function signup(){
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
         const promise = auth.createUserWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message))
-    })
+    }
 
-    btnLogout.addEventListener('click', e => {
+    function logout(){
         firebase.auth().signOut();
-    })
+    }
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser){
             console.log(firebaseUser)
-            btnLogout.style.display = "block";
         } else {
             console.log("not logged in");
-            btnLogout.style.display = "none";
         }
     })
 }());

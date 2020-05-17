@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
     <title>FORM</title>
 </head>
 <body>
-    <div class="modal-body p-4 p-lg-5">
         <form action="#" class="login-form text-left">
             <div class="form-group mb-4">
                 <label>Company Name</label>
-                <input id="Name" type="text" name="name" placeholder="Name" class="form-control">
+                <input id="name" type="text" placeholder="Name" class="form-control">
             </div>
             <div class="form-group mb-4">
                 <label>Company Email</label>
-                <input id="email" type="text" name="email" placeholder="Email" class="form-control">
+                <input id="email" type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group mb-4">
                 <label>Carbon Credit Number</label>
-                <input id="numCredits" type="number" name="numCredits" placeholder="# Credits" class="form-control">
+                <input id="credits" type="number" placeholder="# Credits" class="form-control">
             </div>
             <div class="form-group mb-4">
                 <label>Price</label>
                 <input id="price" type="price" name="price" placeholder="Price" class="form-control">
             </div>
+            <div class="form-group">
+                <button id="sButton" onclick="saveData()">Submit</button>              
+            </div>
         </form>
+        <script src="auth.js"></script>
 </body>
 </html>
