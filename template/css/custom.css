@@ -18,3 +18,34 @@
   margin-bottom: 70px;
   margin-top: -70px;
 }
+
+#carbonEXtrade{
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#view {
+  color: #ffffff;
+  border-radius: 25px;
+  background: #0069d9;
+  padding: 20px;
+  width: 800px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#create {
+  color: #ffffff;
+  border-radius: 25px;
+  background: #0069d9;
+  padding: 20px;
+  width: 800px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
