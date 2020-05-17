@@ -3,13 +3,15 @@ A website designed to ensure a reduction of air pollution by simplifying the pro
 
 ## Technologies
 Project is created with:
-* Bootstrap 4
+* Bootstrap 4.1
 * HTML 5
 * CSS 3
 * Figma
 * Node JS 12.16.3 and npm 6.14.4
 * Firebase 7.2.2
 * Cloud Firestore
+* Lightbox2
+* Google Fonts
 
 ##Setup
 To run this project, install the following files:
