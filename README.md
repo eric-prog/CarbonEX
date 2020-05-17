@@ -1,5 +1,5 @@
 # CarbonEX
-A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies and incentivizing the contributions of consumers towards donating to global environmental charities. Artis creates a way to be economically profitable and reduce harm to the environment.
+A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies and incentivizing the contributions of consumers towards donating to global environmental charities. CarbonEX creates a way to be economically profitable and reduce harm to the environment.
 
 ## Technologies
 Project is created with:
@@ -9,6 +9,7 @@ Project is created with:
 * Figma
 * Node JS 12.16.3 and npm 6.14.4
 * Firebase 7.2.2
+* Cloud Firestore
 
 ##Setup
 To run this project, install the following files:
