@@ -63,3 +63,26 @@
         }
     })
 }());
+
+const txtEmail = document.getElementById('Temail')
+const txtPassword = document.getElementById('Tpassword')
+
+function login(){
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message))
+}
+
+function signup(){
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message))
+}
+
+function logout(){
+    firebase.auth().signOut();
+}
