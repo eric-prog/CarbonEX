@@ -1,5 +1,5 @@
 # CarbonEX
-A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies and incentivizing the contributions of consumers towards donating to global environmental charities. CarbonEX creates a way to be economically profitable and reduce harm to the environment.
+A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies. CarbonEX creates a way to be economically profitable and reduce harm to the environment.
 
 ## Technologies
 Project is created with:
