@@ -1,8 +1,19 @@
 /* your styles go here */
 /* Landing Page */
-head{
-  position: relative;
-  width: 1920px;
-  height: 3800px;
-  background: #DBD3E7;
+#sign-up{
+  color: white
+}
+
+#sign-up span {
+  background-color: rgb(13, 109, 192);
+
+}
+
+#welcome{
+  margin-left: 80px;
+}
+
+#novel{
+  margin-bottom: 70px;
+  margin-top: -70px;
 }
