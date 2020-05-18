@@ -75,7 +75,6 @@ function printData(){
             head1.appendChild(head1node);
             block.appendChild(head1);
             block.appendChild(newLine);
-
         });
     });
 }
