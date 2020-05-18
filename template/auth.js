@@ -47,7 +47,21 @@ var ccredits = document.getElementById("credits");
 var cprice = document.getElementById("price");
 var sButton = document.getElementById("sButton");
 
-function saveData(){ 
+var css = 'h1 { background: lightblue}',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+head.appendChild(style);
+
+style.type = 'text/css';
+if (style.styleSheet){
+  // This is required for IE8 and below.
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+
+function saveData(){
     console.log("bob")
     const userData = {
         Name: cname.value,
@@ -68,11 +82,11 @@ function printData(){
             let email = doc.data().Email;
             let credits = doc.data().Credits;
             let price = doc.data().Price;
-            
+
             var newLine = document.createElement('br');
             var head1 = document.createElement('h1');
             var head1node = document.createTextNode("Name: " + name + "     Email: " + email + "     Credits: " + credits + "     Price: $" + price);
-            
+
             head1.appendChild(head1node);
             block.appendChild(head1);
             block.appendChild(newLine);
@@ -82,4 +96,3 @@ function printData(){
 function logout(){
 firebase.auth().signOut();
 }
-
