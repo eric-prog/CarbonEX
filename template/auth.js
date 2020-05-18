@@ -13,14 +13,42 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
+
+var block = document.getElementById("block123");
+
+const txtEmail = document.getElementById('Temail')
+const txtPassword = document.getElementById('Tpassword')
+
+function login(){
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message))
+}
+
+function signup(){
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message))
+}
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+        console.log(firebaseUser)
+    } else {
+        console.log("not logged in");
+    }
+})
 var cname = document.getElementById("name");
 var cemail = document.getElementById("email");
 var ccredits = document.getElementById("credits");
 var cprice = document.getElementById("price");
 var sButton = document.getElementById("sButton");
-var block = document.getElementById("block");
 
 function saveData(){ 
+    console.log("bob")
     const userData = {
         Name: cname.value,
         Email: cemail.value,
@@ -32,54 +60,26 @@ function saveData(){
     });
 }
 
-db.collection("CompanyData").get().then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
-        const name = doc.data().Name;
-        const email = doc.data().Email;
-        const credits = doc.data().Credits;
-        const price = doc.data().Price;
-        var head1 = document.createElement('h1');
-        var newLine = document.createElement('br');
-        var head1node = document.createTextNode("Name: " + name);
-        var head2 = document.createElement('h1');
-        var head2node = document.createTextNode("Email: " + email + "     Credits: " + credits + "     Price: " + price);
-        head1.appendChild(head1node);
-        head2.appendChild(head2node);
-        block.appendChild(head1);
-        block.appendChild(head2);
-        block.appendChild(newLine);
-        block.appendChild(newLine);
+function printData(){
+    db.collection("CompanyData").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            let name = doc.data().Name;
+            let email = doc.data().Email;
+            let credits = doc.data().Credits;
+            let price = doc.data().Price;
+            
+            var newLine = document.createElement('br');
+            var head1 = document.createElement('h1');
+            var head1node = document.createTextNode("Name: " + name + "     Email: " + email + "     Credits: " + credits + "     Price: $" + price);
+            
+            head1.appendChild(head1node);
+            block.appendChild(head1);
+            block.appendChild(newLine);
+
+        });
     });
-});
-
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-        console.log(firebaseUser)
-    } else {
-        console.log("not logged in");
-    }
-})
-
-const txtEmail = document.getElementById('Temail')
-const txtPassword = document.getElementById('Tpassword')
-
-function login(){
-const email = txtEmail.value;
-const pass = txtPassword.value;
-const auth = firebase.auth();
-const promise = auth.signInWithEmailAndPassword(email, pass);
-promise.catch(e => console.log(e.message))
 }
-
-function signup(){
-const email = txtEmail.value;
-const pass = txtPassword.value;
-const auth = firebase.auth();
-const promise = auth.createUserWithEmailAndPassword(email, pass);
-promise.catch(e => console.log(e.message))
-}
-
 function logout(){
 firebase.auth().signOut();
 }
+
