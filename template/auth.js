@@ -60,6 +60,7 @@ function saveData(){
     });
 }
 
+
 function printData(){
     db.collection("CompanyData").get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
