@@ -23,6 +23,12 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/CarbonEXFavicon.png">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -75,9 +81,7 @@
         <!-- Company Profiles-->
         <header class="section header mb-5">
           <h2 id="view">View Items</h2>
-          <br>
-          <br>
-          <h2 id="create">Create Items</h2>
+          <div id="block"></div>
         </header>
 
       </div>
@@ -88,5 +92,6 @@
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.js"></script>
     <script src="js/front.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
