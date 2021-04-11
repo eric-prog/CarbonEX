@@ -13,13 +13,13 @@ Project is created with:
 * Lightbox2
 * Google Fonts
 
-##Setup
+## Setup
 To run this project, install the following files:
 
-##Features
+## Features
 
-##Acknowledgement
+## Acknowledgement
 Thank you to https://bootstrapious.com/p/big-bootstrap-tutorial for the great tutorials on Bootstrap.
 
-###License
+### License
 This project is licensed under MIT
