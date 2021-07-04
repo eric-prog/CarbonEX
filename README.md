@@ -1,4 +1,4 @@
-# CarbonEX
+## CarbonEX
 A website designed to ensure a reduction of air pollution by simplifying the process of carbon trading between companies. CarbonEX creates a way to be economically profitable and reduce harm to the environment.
 
 ## Technologies
@@ -21,5 +21,5 @@ To run this project, install the following files:
 ## Acknowledgement
 Thank you to https://bootstrapious.com/p/big-bootstrap-tutorial for the great tutorials on Bootstrap.
 
-### License
+## License
 This project is licensed under MIT
